@@ -1,0 +1,10 @@
+<%= form_for @meeting do |f| %>
+
+  title: <%= f.text_field :titels %>
+  Date: <%= f.date_field :tom %>
+  Time: <%= f.datetime_field :tom %>
+  Max Meeters : <%= f.text_field :max %>  
+
+ <%= f.collection_select :tag_ids, Tag.all, :id, :name , { },class:"browser-default"%>
+  <%= f.submit %>
+<% end %>

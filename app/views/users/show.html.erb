@@ -1,0 +1,6 @@
+<h1><%=@user.name%></h1>
+<h1><%=@user.email%></h1>
+<h1><%=@user.created_at%></h1>
+<%@user.meetings.each do |meeting| %>
+<h1><%= meeting.titels %></h1>
+<%end %>

@@ -1,0 +1,7 @@
+<h1><%=  @meeting.titels %></h1>
+<p><%=  @meeting.dom %></p>
+ <p><%=  @meeting.tom %></p>
+ <h1><%= @meeting.users%></h1>
+<%if @meeting.users==current_user %>
+<%= link_to "edit the Meeting",edit_meeting_path%>
+<%end %>

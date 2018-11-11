@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titels: MyString
+  dom: 2018-11-07
+  tom: 2018-11-07 20:01:37
+  max: 1
+
+two:
+  titels: MyString
+  dom: 2018-11-07
+  tom: 2018-11-07 20:01:37
+  max: 1

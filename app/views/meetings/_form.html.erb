@@ -1,10 +1,17 @@
+<div class="container">
+<div class="center">
+<div class="right width1">
 <%= form_for @meeting do |f| %>
-
   title: <%= f.text_field :titels %>
-  Date: <%= f.date_field :tom %>
-  Time: <%= f.datetime_field :tom %>
+  Date: <%= f.date_field :dom %>
+  Time: <%= f.time_field :tom %>
   Max Meeters : <%= f.text_field :max %>  
-
- <%= f.collection_select :tag_ids, Tag.all, :id, :name , { },class:"browser-default"%>
-  <%= f.submit %>
+  <p><input type="text" class="form-control" placeholder="Google Map Link" name="googlemapurl"/></p>
+  <button class="btn1">add</button>
+  <%= hidden_field_tag "meeting[link]", "", class: "link"%>
+ <%= f.collection_select :tag_id, Tag.all, :id, :name , { },class:"browser-default"%>
+  <%= f.submit%>
 <% end %>
+</div>
+</div>
+</div>

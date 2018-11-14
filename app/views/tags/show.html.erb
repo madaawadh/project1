@@ -1,6 +1,16 @@
-<h1>Tags#show</h1>
-<h1>Tags#index</h1>
-<% @tags.meetings.each do |meeting| %>
-<h1><%= link_to meeting.titels, meeting%></h1>
+<div class="container">
+<div class="center">
+<div class="row">
 
+<% @tag.meetings.each do |meeting| %>
+ <div class="col s4">
+<div class="card padding">
+ <div class="card-content white-text">
+<h3 id="start"><%= link_to meeting.titels, meeting,id:"start"%></h3>
+</div>
+</div>
+</div>
 <%end%>
+</div>
+</div>
+</div>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'attendees/new'
   devise_for :users
   get 'users/index'
   get 'users/show'
@@ -9,6 +10,8 @@ Rails.application.routes.draw do
   resources :tags
   # get 'tags/show'
   resources :meetings
+  get "/meetings/:meeting_id/join", to: "attendees#join"
+  resources :attendees
   # get 'meetings/show'
   # get 'meetings/new'
   # get 'meetings/edit'

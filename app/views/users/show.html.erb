@@ -1,6 +1,30 @@
-<h1><%=@user.name%></h1>
-<h1><%=@user.email%></h1>
-<h1><%=@user.created_at%></h1>
+<div class="container">
+<div class="center">
+
+<h3 class="name">Name:<%=@user.name%></h3>
+<h3 class="email">Email:<%=@user.email%></h3>
+<h3 class="ca">Created At:<%=@user.created_at.strftime "%F"%></h3>
+
+
+<ul class="collection with-header width">
+<table class="centered fixed_header">
+       
+  <thead>
+  <li class="collection-header" ><h4>My Meetings</h4></li>
+  </thead>
+   <tbody>
 <%@user.meetings.each do |meeting| %>
-<h1><%= meeting.titels %></h1>
-<%end %>
+          <tr>
+            <td><li class="collection-item"><%= meeting.titels %> <%= meeting.dom %> <%= meeting.tom.strftime "%I:%M" %></li></td>
+          </tr>
+    <%end%>
+    <%@user.attendees.each do |a| %>
+          <tr>
+            <td><li class="collection-item"><%= a.meeting.titels %> </li></td>
+          </tr>
+    <%end%>
+        </tbody>
+      </table>
+<ul>
+</div>
+</div>

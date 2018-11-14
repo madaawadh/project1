@@ -24,8 +24,12 @@ class MeetingsController < ApplicationController
   @meeting.update(meeting_params)
     redirect_to @meeting
  end
-  
+ def destroy
+  meeting=Meeting.find_by(id: params[:id])
+  meeting.destroy
+  redirect_to tags_path
+ end
    def meeting_params
-    params.require(:meeting).permit(:titels,:dom,:tom,:max,tag_ids: [])
+    params.require(:meeting).permit(:titels,:dom,:tom,:max,current_user.id,:tag_id, :link)
   end
 end

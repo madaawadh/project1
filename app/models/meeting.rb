@@ -1,4 +1,5 @@
 class Meeting < ApplicationRecord
-    belongs_to :users
-    has_and_belongs_to_many :tags
+    belongs_to :user
+    belongs_to :tag
+    has_many :attendees
 end

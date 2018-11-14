@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MeetingsManagement</title>
+    <title>MeetUs</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-   
-            
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     <!-- Compiled and minified JavaScript -->
+     <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+      <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <nav>
+   <div class="navbar-fixed">
+  <nav class="nav-wrapper">
+ 
+   <a href="#" class="brand-logo font"> <span class="prt1">Me</span>et<span class="prt3">Us</span></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+  
    <% if user_signed_in? %>
-   <%= link_to "Profile", user_path(current_user) %>
-   <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-   <%= link_to "Meetings", meetings_path %>
-   <%= link_to "Create a Meeting",new_meeting_path%>
+    <li><a href="#"> <%= link_to "Home", root_path %></a></li>
+  <li><a href="#"> <%= link_to "Profile", user_path(current_user) %></a></li>
+<li> <a href="#">  <%= link_to "Meetings", tags_path %> </a></li>
+ <li> <a href="#"> <%= link_to "Start a Meeting",new_meeting_path%> </a></li>
+ <li> <a href="#"> <%= link_to "Log Out", destroy_user_session_path, method: :delete %> </a></li>
    <% else %>
-  <%= link_to "Log in", new_user_session_path %>
-  <%= link_to "Sign Up", new_user_registration_path %>
+   <li> <a href="#"><%= link_to "Log in", new_user_session_path %> </a></li>
+   <li><a href="#"><%= link_to "Sign Up", new_user_registration_path %> </a></li>
   <% end %>
+  </ul>
     </nav>
-    <% if user_signed_in? %>
-      <p>
-        Welcome  
-        <%= current_user.name %>!
-      </p>
-    <% end %>
+ </div>
+
   <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
     <%= yield %>
+    <footer class="page-footer" id="footer">
+    </footer>
   </body>
 </html>

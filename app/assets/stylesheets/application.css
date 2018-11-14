@@ -14,3 +14,95 @@
  *= require_self
  */
  /* @import "materialize"; */
+ .card{
+     background-color:rgb(146, 204, 222);
+     height:200px;  
+ }
+ .color{
+color:white;
+ }
+ footer{
+  background-color: #F25652;
+        width:100%;
+        position: fixed;
+        bottom: 0px;
+        text-align: center; /* This line is not needed but centers your text */ 
+    }
+  #footer{
+    background-color: #C1403D;
+    }
+#start{
+  color:#03353E;
+  background-color:rgb(146, 204, 222);
+
+}
+#start1{
+  color:#03353E;
+  background-color:rgb(146, 204, 222);
+  width:150px;
+}
+body{
+  color:#03353E;
+  /* background-color: #A79C93; */
+}
+nav{
+  background-color: #C1403D;
+  color:#C2E7F2
+}
+.font{
+font-family: 'Yatra One', cursive;
+font-size:90px;
+}
+.name{
+margin-left:-300px;
+}
+.ca{
+  margin-left:-160px;
+  }
+.width{
+  width:600px;
+  left:200px;
+
+}
+.width1{
+  width:600px;
+  
+  margin-right:200px;
+}
+img{
+  height: 200px;
+  width: 200px;
+}
+.prt1{
+color:#03353E;
+}
+.prt3{
+  color:rgb(146, 204, 222);
+  }
+.prt2{
+  color:#C1403D;
+  }
+.prt3-2{
+    color:#0294A5;
+  }
+  .fixed_header{
+    width: 900px;
+    /* table-layout: fixed; */
+    /* border-collapse: collapse; */
+}
+
+.fixed_header tbody{
+  display:block;
+  width: 100%;
+  overflow: auto;
+  height: 150px;
+}
+.fixed_header thead tr {
+  display: block;
+}
+
+.fixed_header th, .fixed_header td {
+  padding: 5px;
+  text-align: center;
+  width: 600px;
+}

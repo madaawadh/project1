@@ -1,7 +1,57 @@
-<h1><%=  @meeting.titels %></h1>
-<p><%=  @meeting.dom %></p>
- <p><%=  @meeting.tom %></p>
- <h1><%= @meeting.users%></h1>
-<%if @meeting.users==current_user %>
-<%= link_to "edit the Meeting",edit_meeting_path%>
+<div class="container">
+<div class="center">
+<h1 class=prt3-2><%= @meeting.titels %></h1>
+   <div class="row">
+    <div class="col s7 push-s5">
+  <iframe 
+  width="300" 
+  height="170" 
+  frameborder="0" 
+  scrolling="no" 
+  marginheight="0" 
+  marginwidth="0" 
+  src="<%=@meeting.link %>"
+ >
+ </iframe>
+   </div>
+    <div class="col s5 pull-s6">
+ <h4><span class=prt3>When?</span> <%=  @meeting.dom %></h4>
+ <h4><span class=prt3>Time? </span><%=@meeting.tom.strftime "%I:%M" %></h4>
+  <h4><span class=prt3>Started By:</span> <%= @meeting.user.name%></h4>
+  </div>
+  </div>
+<div class="center">
+<%if @meeting.user==current_user %>
+<%= link_to "Edit",edit_meeting_path ,class:"waves-effect waves-light btn" ,id:"start1"%>
+<%= link_to "Delete",meeting_path, method: "delete",class:"waves-effect waves-light btn" ,id:"start1"%>
+<%else %>
+<%exist=true %>
+<% @meeting.attendees.each do |a| %>
+ <%if a.user==current_user %>
+ <% exist=false %>
+ <%end %>
+ <%end %>
+ <%if exist==true%>
+<%= link_to "Join", "/meetings/#{@meeting.id}/join",class:"waves-effect waves-light btn" ,id:"start1" %>
 <%end %>
+
+<%end %>
+
+</div>
+<ul class="collection with-header width">
+<table class="centered fixed_header">
+<thead>
+  <li class="collection-header prt3-2" ><h4>Meeters</h4></li>
+  </thead>
+   <tbody>
+
+<% @meeting.attendees.each do |a| %>
+ <tr>
+<td><li><%= a.user.name %></li></td>
+ </tr>
+<%end %>
+ </tbody>
+      </table>
+<ul>
+</div>
+</div>

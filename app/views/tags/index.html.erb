@@ -1,5 +1,17 @@
-<h1>Tags#index</h1>
+<div class="container">
+<div class="row">
+<div class="center">
 <% @tags.each do |tag| %>
-<h1><%= link_to tag.name, tag%></h1>
-<%end%>
+ <div class="col s4">
+<div class="card">
+  
+ <div class="card-content white-text">
+ <span class="card-title" ><h3><%= link_to tag.name, tag,id:"start"%></h3><span>
 
+</div>
+</div>
+</div>
+<%end%>
+</div>
+</div>
+</div>

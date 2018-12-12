@@ -97,7 +97,7 @@ color:#03353E;
   overflow: auto;
   height: 150px;
 }
-.fixed_header thead tr {
+.fixed_header thead tr{
   display: block;
 }
 

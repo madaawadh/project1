@@ -1,12 +1,14 @@
 # README
 # MeetUs
-
+Meet people with similar interests
 ## Technology used
 HTML-Jquery-css-rubyOnRails
 ## Thought process/approach
-4 Models Meetings has many Attendees and belong to one tag user has many Meetings And belong to Attendee
+4 Models Meetings has many Attendees and belong to one tag user has many Meetings 
 ## Link to GitHub Pages
 https://github.com/madaawadh/project1
+## Link to Heroku Pages
+https://polar-river-99657.herokuapp.com/
 ## What's next?
 Adding more necessary features ,better styling 
 ## Credits

@@ -3,10 +3,10 @@
 <div class="row">
 
 <% @tag.meetings.each do |meeting| %>
- <div class="col s4">
+ <div class="col s4 meeting" id=<%= meeting.id%>>
 <div class="card padding">
  <div class="card-content white-text">
-<h3 id="start"><%= link_to meeting.titels, meeting,id:"start"%></h3>
+<span id="start"><h3><%= link_to meeting.titels, meeting,id:"start"%><h3></span>
 </div>
 </div>
 </div>

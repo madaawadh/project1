@@ -27,4 +27,12 @@ $(function () {
         var link = "https://google.com/maps?q=" + lon + "," + lat + "&hl=es$z=14&output=embed"
         $(".link").val(link);
     });
+    $('.tag').on('click', function (e) {
+        var col = $(this).attr('id');
+        location.href = `/tags/${col}`;
+    });
+    $('.meeting').on('click', function (e) {
+        var col = $(this).attr('id');
+        location.href = `/meetings/${col}`;
+    });
 });

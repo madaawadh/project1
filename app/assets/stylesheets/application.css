@@ -53,12 +53,12 @@ nav{
 font-family: 'Yatra One', cursive;
 font-size:90px;
 }
-.name{
+/* .name{
 margin-left:-300px;
-}
-.ca{
+} */
+/* .ca{
   margin-left:-160px;
-  }
+  } */
 .width{
   width:600px;
   left:200px;
@@ -105,4 +105,9 @@ color:#03353E;
   padding: 5px;
   text-align: center;
   width: 600px;
+}
+.profile{
+position: relative;
+left:700px;
+bottom:200px
 }
